@@ -1,0 +1,116 @@
+# Phil Johnston, II - Complete Profile
+
+> Developer Relations leader with 15 years building developer programs at BMW, GoPro, HERE Technologies, and 1Password. Photographer and tinkerer. Based in Portland, OR. Remote-first since 2019.
+
+---
+
+## Profile
+
+Name: Phil Johnston, II
+Tagline: Patterns and stories that are both surreal and require dedication to fully understand.
+Roles: Developer Relations, Photographer, Tinkerer
+Location: Portland, OR. Remote-first since 2019.
+Website: https://philjohnstonii.com
+Contact: https://philjohnstonii.com (form on homepage)
+
+---
+
+## Summary
+
+I've spent 15 years helping developers succeed on platforms most people only read about in press releases.
+
+At GoPro, I built the Developer Program from zero to 330 partner companies, including NASA, Google, BMW, and Jaguar Land Rover, managing a team of 10 engineers to make it happen. At BMW, I led the application integration program that brought Audible, Pandora, and other household names into the connected car. At HERE Technologies, I onboarded 15,000 developers during a global pandemic and grew a cloud marketplace's addressable market by 2,250x. Most recently at 1Password, I established the company's developer relations vision across open and closed source, led cross-functional GTM, and served as chief developer advocate and content producer.
+
+My work sits at the intersection of developer experience, technical product strategy, and community building. I think in terms of time-to-first-integration, developer adoption curves, and the content that actually moves people from "browsing the docs" to "shipping in production." I've built RAG-powered tutorial generation systems, custom social media monitoring tools, and the kind of developer marketing programs that produce 123 videos and measurable onboarding results.
+
+I hold a BS in Computer Science from the University of Portland, where I was an Entrepreneur Scholar. I'm also certified in Prompt Engineering through Dr. Elvis Savaria's program (Facebook Llama Project).
+
+---
+
+## Career Timeline
+
+- 2024: Developer Relations, 1Password (Agilebits)
+- 2021-2023: Sr. Product Manager, Cloud Marketplace Platform, HERE Technologies
+- 2019-2021: Sr. Program Manager, Developer Relations, HERE Technologies
+- 2014-2017: Director, GoPro Developer Relations
+- 2011-2014: Head of BMW Group Developer Relations
+- 2008: BS Computer Science, University of Portland (Entrepreneur Scholar)
+
+---
+
+## Technical Focus
+
+- GenAI/ML: RAG Implementation, Prompt Engineering, OpenAI APIs
+- Platforms: API/SDK Product Management, Developer Experience (DX)
+- Cloud: Marketplace Platforms, Self-Service Infrastructure
+- Metrics: Developer Adoption, Time-to-Integration, Platform Growth
+
+---
+
+## What Sets Me Apart
+
+### Zero-to-One DevRel Builder
+Three times I've built developer relations programs from scratch at companies that had never had one: BMW, GoPro, and 1Password. I know how to make the case internally, hire the team, define the metrics, and ship results before anyone loses patience.
+
+### Enterprise Partnership DNA
+My developer programs haven't just attracted hobbyists. I've built ecosystems that brought in NASA, Google, BMW, Jaguar Land Rover, JPL, and Hot Wheels. I understand how to design programs that serve both indie builders and Fortune 500 engineering teams.
+
+### 2,250x Market Growth
+At HERE Technologies, I took a cloud API marketplace from a narrow segment to a 2,250x expansion of its serviceable obtainable market. That's what happens when developer experience strategy meets product management rigor.
+
+### 15,000 Developers Onboarded During a Pandemic
+When COVID shut down every conference and meetup in 2020, I pivoted HERE's developer relations to fully digital, onboarding 15,000 developers and generating 100+ media articles through tutorials, video content, and community engagement.
+
+### AI-Native Practitioner
+I've built RAG-based tutorial generation pipelines, custom social monitoring tools for Bluesky and Mastodon, and I hold a Prompt Engineering certification from the team behind Facebook's Llama project. I bring hands-on GenAI fluency to everything I do.
+
+### Content at Scale
+Across my career, I've produced and directed 123+ developer tutorial videos, written technical documentation, and served as the on-camera advocate for multiple brands. I understand the full pipeline from scripting to shooting to distribution.
+
+---
+
+## Blog Posts
+
+### Leaving LinkedIn and Choosing Independence
+Published: February 5, 2026
+URL: https://philjohnstonii.com/blog/phil-johnston-linkedin-leaving-linkedin-and-choosing-independence
+
+After nearly two decades on LinkedIn, I lost my account overnight due to a compromise and policy enforcement. I understand LinkedIn's decision, but the experience forced me to confront how fragile a centralized professional identity really is. This post isn't about blame. It's about lessons learned, security realities, and why I'm choosing a more independent path forward.
+
+### The Future of Micro-Niche AI Tools
+Published: January 22, 2026
+URL: https://philjohnstonii.com/blog/future-of-micro-niche-ai-tools
+
+As someone who's soon to be less relevant when it comes to technology, I am personally augmenting my workflows to include self-developed tools to help me get my work done. One recent example is a quick script that will test server configurations.
+
+### Encouraging Developers to Share Their Stories in Their Own Words
+Published: September 3, 2025
+URL: https://philjohnstonii.com/blog/encouraging-developers-to-share-their-stories
+
+As a developer relations professional, one of our goals is to highlight the voices of the developers we serve.
+
+### Micro-niche vibe coding?
+Published: August 28, 2025
+URL: https://philjohnstonii.com/blog/micro-niche-vibe-coding
+Tags: tinkering
+
+I've been vibing lately with terminal UI (TUI) apps. Small personal tools that help me optimize a very specific task or workflow. I call these "Micro-Niche" tools. I can spin these tools up in an afternoon, where before I would have just kept plodding along without them. This is the project that finally worked!
+
+---
+
+## Structured Data API
+
+All data is available as JSON at these public endpoints (no authentication required, updated daily):
+
+- Profile: https://eusef.github.io/phils-personal-mcp/api/profile.json
+- Resume: https://eusef.github.io/phils-personal-mcp/api/resume.json
+- Blog: https://eusef.github.io/phils-personal-mcp/api/blog.json
+
+An MCP (Model Context Protocol) server is also available for deeper agent integration:
+- Repository: https://github.com/eusef/phils-personal-mcp
+- Transport: stdio (clone and build from server/ directory)
+- Tools: get_profile, get_resume, search_blog, get_blog_post
+
+---
+
+Last updated: March 5, 2026

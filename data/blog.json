@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "title": "\"Phil Johnston LinkedIn\" (Leaving LinkedIn and Choosing Independence)",
+      "date": "2/5/26",
+      "url": "https://philjohnstonii.com/blog/phil-johnston-linkedin-leaving-linkedin-and-choosing-independence",
+      "slug": "phil-johnston-linkedin-leaving-linkedin-and-choosing-independence",
+      "excerpt": "After nearly two decades on LinkedIn, I lost my account overnight due to a compromise and policy enforcement. I understand LinkedIn's decision, but the experience forced me to confront how fragile a centralized professional identity really is. This post isn't about blame. It's about lessons learned, security realities, and why I'm choosing a more independent path forward.",
+      "full_content": null,
+      "tags": []
+    },
+    {
+      "title": "The Future of Micro-Niche AI Tools",
+      "date": "1/22/26",
+      "url": "https://philjohnstonii.com/blog/future-of-micro-niche-ai-tools",
+      "slug": "future-of-micro-niche-ai-tools",
+      "excerpt": "As someone who's soon to be less relevant when it comes to technology, I am personally augmenting my workflows to include self-developed tools to help me get my work done. One recent example is a quick script that will test server...",
+      "full_content": null,
+      "tags": []
+    },
+    {
+      "title": "Encouraging Developers to Share Their Stories in Their Own Words",
+      "date": "9/3/25",
+      "url": "https://philjohnstonii.com/blog/encouraging-developers-to-share-their-stories",
+      "slug": "encouraging-developers-to-share-their-stories",
+      "excerpt": "As a developer relations professional, one of our goals is to highlight the voices of the developers we serve.",
+      "full_content": null,
+      "tags": []
+    },
+    {
+      "title": "Micro-niche vibe coding?",
+      "date": "8/28/25",
+      "url": "https://philjohnstonii.com/blog/micro-niche-vibe-coding",
+      "slug": "micro-niche-vibe-coding",
+      "excerpt": "I've been vibing lately with terminal UI (TUI) apps. Small personal tools that help me optimize a very specific task or workflow. I call these \"Micro-Niche\" tools. I can spin these tools up in an afternoon, where before I would have just kept plodding along without them. This is the project that finally worked!",
+      "full_content": null,
+      "tags": ["tinkering"]
+    }
+  ],
+  "scraped_at": "2026-03-05T17:00:00Z",
+  "last_updated": "2026-03-05T17:00:00Z"
+}

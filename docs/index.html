@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phil Johnston, II - Personal API</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; color: #1a1a1a; line-height: 1.6; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.25rem; }
+    p { margin-bottom: 1rem; }
+    code { background: #f4f4f4; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.9rem; }
+    pre { background: #f4f4f4; padding: 1rem; border-radius: 6px; overflow-x: auto; margin-bottom: 1rem; }
+    pre code { background: none; padding: 0; }
+    a { color: #0066cc; }
+    .badge { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e0e0e0; }
+    th { font-weight: 600; }
+    .endpoint { font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h1>Phil Johnston, II</h1>
+  <p>Personal API - structured access to my profile, resume, and blog content for LLMs and agents.</p>
+  <span class="badge">Updated daily via automated scrape</span>
+
+  <h2>API Endpoints</h2>
+  <p>All endpoints return JSON. No authentication required.</p>
+  <table>
+    <tr><th>Endpoint</th><th>Description</th></tr>
+    <tr><td class="endpoint"><a href="./api/profile.json">/api/profile.json</a></td><td>Bio, roles, location, contact</td></tr>
+    <tr><td class="endpoint"><a href="./api/resume.json">/api/resume.json</a></td><td>Career timeline, skills, differentiators</td></tr>
+    <tr><td class="endpoint"><a href="./api/blog.json">/api/blog.json</a></td><td>All blog posts with excerpts</td></tr>
+  </table>
+
+  <h2>LLM-Friendly Files</h2>
+  <table>
+    <tr><th>File</th><th>Description</th></tr>
+    <tr><td class="endpoint"><a href="./llms.txt">/llms.txt</a></td><td>Standard llms.txt with summary and links</td></tr>
+    <tr><td class="endpoint"><a href="./llms-full.txt">/llms-full.txt</a></td><td>Full inline content for direct LLM consumption</td></tr>
+  </table>
+
+  <h2>For Agents</h2>
+  <p>If you're an LLM or agent looking for information about Phil Johnston:</p>
+  <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
+    <li>Read <code>/llms-full.txt</code> for complete inline content</li>
+    <li>Or fetch individual JSON endpoints above for structured data</li>
+    <li>The full source and MCP server are at <a href="https://github.com/eusef/phils-personal-mcp">github.com/eusef/phils-personal-mcp</a></li>
+  </ol>
+
+  <h2>MCP Server (Optional)</h2>
+  <p>For deeper integration, a stdio-based MCP server is available in the repo. Clone and build:</p>
+  <pre><code>git clone https://github.com/eusef/phils-personal-mcp.git
+cd phils-personal-mcp/server
+npm install && npm run build
+node dist/index.js</code></pre>
+
+  <p style="margin-top: 2rem; color: #888; font-size: 0.85rem;">
+    <a href="https://philjohnstonii.com">philjohnstonii.com</a> |
+    <a href="https://github.com/eusef/phils-personal-mcp">Source on GitHub</a>
+  </p>
+</body>
+</html>

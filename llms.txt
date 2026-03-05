@@ -1,0 +1,61 @@
+# Phil Johnston, II
+
+> Developer Relations leader with 15 years building developer programs at BMW, GoPro, HERE Technologies, and 1Password. Photographer and tinkerer. Based in Portland, OR. Remote-first since 2019. BS Computer Science, University of Portland. Certified in Prompt Engineering (Facebook Llama Project). For structured JSON data, see the API endpoints below.
+
+## Profile
+
+Phil Johnston, II is a developer relations professional who specializes in building developer programs from zero to one. His roles span Developer Relations, Photography, and Tinkering.
+
+He has built ecosystems for enterprise partners including NASA, Google, BMW, Jaguar Land Rover, JPL, and Hot Wheels, and has onboarded 15,000+ developers across his career. He produces developer tutorial videos (123+), writes technical documentation, and builds AI-powered developer tools.
+
+Website: https://philjohnstonii.com
+Contact form: https://philjohnstonii.com (on homepage)
+Location: Portland, OR (remote-first since 2019)
+
+## Career
+
+- 2024: Developer Relations at 1Password (Agilebits). Established developer relations vision across open and closed source, led cross-functional GTM, served as chief developer advocate and content producer.
+- 2021-2023: Sr. Product Manager, Cloud Marketplace Platform at HERE Technologies. Grew a cloud API marketplace's addressable market by 2,250x.
+- 2019-2021: Sr. Program Manager, Developer Relations at HERE Technologies. Onboarded 15,000 developers during a global pandemic, generated 100+ media articles.
+- 2014-2017: Director, GoPro Developer Relations. Built the Developer Program from zero to 330 partner companies including NASA, Google, BMW. Managed a team of 10 engineers.
+- 2011-2014: Head of BMW Group Developer Relations. Led application integration for Audible, Pandora, and other household names into the connected car.
+- 2008: BS Computer Science, University of Portland (Entrepreneur Scholar).
+
+## Technical Focus
+
+- GenAI/ML: RAG Implementation, Prompt Engineering, OpenAI APIs
+- Platforms: API/SDK Product Management, Developer Experience (DX)
+- Cloud: Marketplace Platforms, Self-Service Infrastructure
+- Metrics: Developer Adoption, Time-to-Integration, Platform Growth
+
+## What Sets Phil Apart
+
+Zero-to-One DevRel Builder: Three times built developer relations programs from scratch at BMW, GoPro, and 1Password.
+
+Enterprise Partnership DNA: Built ecosystems that brought in NASA, Google, BMW, Jaguar Land Rover, JPL, and Hot Wheels.
+
+2,250x Market Growth: At HERE Technologies, expanded a cloud API marketplace from a narrow segment to a 2,250x expansion of its serviceable obtainable market.
+
+15,000 Developers Onboarded During a Pandemic: Pivoted HERE's developer relations to fully digital in 2020.
+
+AI-Native Practitioner: Built RAG-based tutorial generation pipelines, custom social monitoring tools for Bluesky and Mastodon. Holds Prompt Engineering certification from the team behind Facebook's Llama project.
+
+Content at Scale: Produced and directed 123+ developer tutorial videos across multiple brands.
+
+## Blog
+
+- "Phil Johnston LinkedIn" (Leaving LinkedIn and Choosing Independence) - 2/5/26: https://philjohnstonii.com/blog/phil-johnston-linkedin-leaving-linkedin-and-choosing-independence
+- The Future of Micro-Niche AI Tools - 1/22/26: https://philjohnstonii.com/blog/future-of-micro-niche-ai-tools
+- Encouraging Developers to Share Their Stories in Their Own Words - 9/3/25: https://philjohnstonii.com/blog/encouraging-developers-to-share-their-stories
+- Micro-niche vibe coding? - 8/28/25: https://philjohnstonii.com/blog/micro-niche-vibe-coding
+
+## Structured Data API
+
+JSON endpoints (no auth required, updated daily):
+
+- Profile: https://eusef.github.io/phils-personal-mcp/api/profile.json
+- Resume: https://eusef.github.io/phils-personal-mcp/api/resume.json
+- Blog: https://eusef.github.io/phils-personal-mcp/api/blog.json
+- Full content: https://eusef.github.io/phils-personal-mcp/llms-full.txt
+
+Source: https://github.com/eusef/phils-personal-mcp
