@@ -298,6 +298,57 @@ def _find_section(sections, keywords):
     return None
 
 
+def _merge_consulting_services(sections, page_title):
+    """
+    Normalise consulting sections into (services, track_record) where:
+    - services: list of {name, price, description}
+    - track_record: list of strings (bullet items without a price)
+
+    Handles two Squarespace layout quirks:
+    1. The h1 headline appears as the first section heading — skip it.
+    2. Prices are sometimes their own <h4> section rather than paragraph
+       content of the service section — merge them back.
+    """
+    services = []
+    track_record = []
+    current = None
+
+    for s in sections:
+        heading = s.get("heading") or ""
+        content = s.get("content") or []
+
+        # Skip the page headline (same text as page title)
+        if heading == page_title:
+            continue
+
+        if "$" in heading:
+            # Price-as-heading: attach to the preceding service
+            if current is not None:
+                current["price"] = heading
+                if content and not current["description"]:
+                    current["description"] = content[0]
+        else:
+            # Flush previous service
+            if current is not None:
+                if current.get("price"):
+                    services.append(current)
+                else:
+                    track_record.append(current["name"])
+            # Start new entry
+            price = next((c for c in content if "$" in c), None)
+            desc = next((c for c in content if "$" not in c and c), None)
+            current = {"name": heading, "price": price, "description": desc}
+
+    # Flush last entry
+    if current is not None:
+        if current.get("price"):
+            services.append(current)
+        else:
+            track_record.append(current["name"])
+
+    return services, track_record
+
+
 def generate_llms_txt():
     """Generate llms.txt and llms-full.txt from all scraped JSON data."""
 
@@ -376,24 +427,24 @@ def generate_llms_txt():
 
         # Consulting
         if consulting.get("sections"):
-            out.append("## Consulting")
-            out.append("")
-            if consulting.get("title"):
-                out += [consulting["title"], ""]
-            for s in consulting["sections"]:
-                heading = s.get("heading") or ""
-                content = s.get("content") or []
-                if not heading:
-                    continue
-                price = next((c for c in content if "$" in c), "")
-                desc = next((c for c in content if "$" not in c and c), "")
-                line = f"- {heading}"
-                if price:
-                    line += f": {price}"
-                if desc:
-                    line += f". {desc}"
-                out.append(line)
-            out += ["", f"Booking: {urljoin(BASE_URL, '/consulting')}", ""]
+            services, track_record = _merge_consulting_services(
+                consulting["sections"], consulting.get("title", "")
+            )
+            if services or track_record:
+                out.append("## Consulting")
+                out.append("")
+                if consulting.get("title"):
+                    out += [consulting["title"], ""]
+                for svc in services:
+                    line = f"- {svc['name']}: {svc['price']}"
+                    if svc.get("description"):
+                        line += f". {svc['description']}"
+                    out.append(line)
+                if track_record:
+                    out += ["", "Track record:"]
+                    for tr in track_record:
+                        out.append(f"- {tr}")
+                out += ["", f"Booking: {urljoin(BASE_URL, '/consulting')}", ""]
 
         # Blog
         if posts:
@@ -460,23 +511,25 @@ def generate_llms_txt():
 
         # Consulting full detail
         if consulting.get("sections"):
-            out += ["## Consulting", ""]
-            if consulting.get("title"):
-                out += [f"Headline: {consulting['title']}", ""]
-            for s in consulting["sections"]:
-                heading = s.get("heading") or ""
-                content = s.get("content") or []
-                if not heading:
-                    continue
-                out.append(f"### {heading}")
-                price = next((c for c in content if "$" in c), "")
-                desc = next((c for c in content if "$" not in c and c), "")
-                if price:
-                    out.append(f"Price: {price}")
-                if desc:
-                    out.append(f"Description: {desc}")
-                out.append("")
-            out += [f"Booking: {urljoin(BASE_URL, '/consulting')}", "", "---", ""]
+            services, track_record = _merge_consulting_services(
+                consulting["sections"], consulting.get("title", "")
+            )
+            if services or track_record:
+                out += ["## Consulting", ""]
+                if consulting.get("title"):
+                    out += [f"Headline: {consulting['title']}", ""]
+                for svc in services:
+                    out.append(f"### {svc['name']}")
+                    out.append(f"Price: {svc['price']}")
+                    if svc.get("description"):
+                        out.append(f"Description: {svc['description']}")
+                    out.append("")
+                if track_record:
+                    out += ["### Track Record", ""]
+                    for tr in track_record:
+                        out.append(f"- {tr}")
+                    out.append("")
+                out += [f"Booking: {urljoin(BASE_URL, '/consulting')}", "", "---", ""]
 
         # Blog full posts
         if posts:
