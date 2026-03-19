@@ -24,8 +24,10 @@ that help me optimize a very specific task or workflow. I call these
 before I would have just kept plodding along without them.
 
 This is the project that finally worked!
-- [Phil Johnston, II](https://philjohnstonii.com/about-me)
-- [I help API-first companies build developer programs that drive adoption.](https://philjohnstonii.com/consulting)
+- [I help API-first companies build developer programs that drive adoption.](https://philjohnstonii.com/consulting): Fractional DevRel consulting for API-first companies. Services include 
+Fractional Head of DevRel ($5,000/mo), DevRel Program Audit ($2,500), and 
+AI DevRel Accelerator ($3,500-4,000). Track record with GoPro, HERE 
+Technologies, and 1Password.
 
 ## About
 
