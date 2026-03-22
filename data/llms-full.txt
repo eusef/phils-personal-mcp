@@ -4,6 +4,80 @@
 
 ---
 
+## The Last SaaS You’ll Ever Subscribe To
+
+URL: https://philjohnstonii.com/blog/the-last-saas-youll-ever-subscribe-to
+Summary: Most business software is a UI layer on top of well-documented rules. As 
+LLMs get better at generating those interfaces on demand, the subscription 
+model starts to look like a relic. This is what comes next.
+
+The Last SaaS You’ll Ever Subscribe To
+In September, I wrote about the future of micro-niche AI tools. The core idea was simple: instead of hunting for software that sort of fits your needs, you describe what you want and an LLM builds it for you in minutes. That post focused on personal tools. Scripts, dashboards, one-off utilities tuned to how you actually work.
+This post is about what happens when that same idea scales to business software.
+The UI Is the Product. The Logic Is Commodity.
+Think about the software most businesses run on. CRMs, project management tools, invoicing systems, expense trackers, onboarding checklists. Strip away the branding and the pricing page, and what you have is a user interface layer sitting on top of well-documented business processes.
+The intellectual property in most SaaS products is not the logic. Invoicing follows rules. Project tracking follows rules. CRM workflows follow rules. The value has always been in persistence (your data stays somewhere), integrations (it connects to your other tools), and muscle memory (your team already knows how to use it).
+LLMs can already generate full working applications from a description. I have watched models produce functional CRUD apps, dashboards, and form-based workflows in a single session. The gap is not capability. The gap is statefulness. A user needs an instance they can return to tomorrow, customize over time, and trust with real data.
+Striking an Instance
+The concept I keep coming back to is “striking an instance.” If you work in infrastructure, you know the idea. You spin up a container, configure it, point traffic at it, and it runs. When you are done, you tear it down.
+Now imagine that for a non-technical user. You describe what you need: “I want a tool that tracks tenant maintenance requests, lets me assign them to contractors, and sends me a weekly summary.” An LLM generates the application. It spins up with your data, your preferences, your integrations. You use it until you do not need it anymore, or you keep it running and iterate on it over time.
+This is not theoretical. I am already building this way. My property management system started as Markdown files in a git repository, and I am layering a FastAPI and HTMX interface on top of it. The logic is simple. The data format is portable. The interface can be regenerated or redesigned at any point because the underlying structure is clean and well-documented.
+That is on-demand software. Not an app you download. Not a subscription you pay monthly for. A tool that exists because you described it.
+Proof It Already Works
+Earlier this year I replaced an entire SaaS workflow with a vibe-coded TUI built in an afternoon. I was using Khoros for community management and needed a specific view of the data that their product did not offer. Instead of filing a feature request or shopping for a different vendor, I asked an LLM to build me a terminal-based reader that pulled exactly the data I needed and displayed it exactly the way I wanted.
+It took one afternoon. Not one sprint. Not one procurement cycle. One afternoon.
+Now scale that idea. Expense reports. Lease tracking. Onboarding checklists for new employees. Inventory management for a small warehouse. Every one of these is a well-documented process that an LLM can turn into a working tool if you give it the right description and a clean data layer underneath.
+The SaaS Pricing Model Breaks Down
+Here is the part that should make SaaS executives uncomfortable. The traditional model charges you monthly for access to software that does not change much between updates. You pay for the privilege of using someone else’s UI on top of logic that is fundamentally commodity.
+When a user can regenerate the tool, the pricing model collapses. Why pay $49 per seat per month for a project management tool when you can describe what you need and have a working version in 20 minutes? The answer today is still persistence, integrations, and trust. But those barriers are eroding fast.
+Persistence is a solved problem. Databases are cheap and plentiful. Integrations are moving toward standard protocols (more on this in my next post). Trust is the last real moat, and it is a function of reliability and security, both of which can be engineered into a generation pipeline.
+The Counterarguments Are Real but Solvable
+I am not going to pretend this transition is frictionless. Vendor lock-in is a genuine concern. Enterprises have decades of data gravity pulling them toward existing platforms. Compliance requirements in healthcare, finance, and real estate mean you cannot just spin up software and hope for the best.
+But these are engineering problems, not fundamental barriers. Data portability standards exist. Compliance frameworks can be codified into generation templates. The same LLMs that build the software can also validate it against regulatory requirements before it ever touches production data.
+The real question is not whether on-demand software will replace SaaS. It is how quickly the tooling around it matures to handle the edge cases that enterprises care about. Standards, interoperability, and software development lifecycle practices will determine the pace. Those are topics I will cover in the next two posts in this series.
+What This Means for You
+If you are a founder building a SaaS product, the question to ask yourself is: what part of my product cannot be regenerated by an LLM? If the answer is mostly the data layer and the integrations, your moat is thinner than you think.
+If you are a developer building tools for yourself or your team, you are already living in this future. Every script you generate, every dashboard you spin up, every workflow you automate with a prompt is on-demand software in its earliest form.
+And if you are a user who has ever been frustrated by software that almost does what you need, the future looks like this: you describe what you want, and the tool exists. Not a tool that was designed for a million users and sort of works for your case. A tool that was designed for you.
+That is the trajectory I see. Not the death of all SaaS overnight, but a steady erosion of the moats that justified subscription pricing in the first place. The companies that survive will be the ones that own the data layer, the integration standards, or the trust infrastructure. Everyone else is selling a UI that the user can rebuild themselves.
+What Running DevRel at 1Password Taught Me About Open Source and Developer Trust
+
+---
+
+## What Running DevRel at 1Password Taught Me About Open Source and Developer Trust
+
+URL: https://philjohnstonii.com/blog/what-running-devrel-at-1password-taught-me-about-open-source-and-developer-trust
+Summary: Lessons from building DevRel at 1Password: managing 900+ open source 
+projects, scaling technical content, and why trust is the product for 
+security-focused developer tools.
+
+What Running DevRel at 1Password Taught Me About Open Source and Developer Trust
+1Password is a product that developers already love. That’s a rare starting position for a DevRel program. Most companies have to convince developers to care. At 1Password, the challenge was different: how do you build a formal developer relations function around a product that already has organic developer affinity, without breaking the trust that earned it?
+The Starting Point
+When I came in, 1Password had over 900 open source projects in its ecosystem but no unified DevRel vision tying them together. There was developer interest, technical content being produced in pockets, and a strong engineering brand. What was missing was a strategy connecting all of it.
+My role was to establish that strategy: define what developer relations meant for 1Password, build the content engine, manage the open source program, and serve as the company’s developer advocate across channels.
+Open Source at Scale
+Managing 900+ open source projects is a fundamentally different challenge than running a handful of flagship repos. At that scale, the questions shift from “how do we maintain this project” to “how do we maintain a coherent developer experience across hundreds of touchpoints.”
+The approach I took was to focus on the developer’s perspective rather than the project’s perspective. A developer interacting with 1Password’s open source ecosystem doesn’t think in terms of individual repos. They think in terms of tasks: “I want to integrate 1Password into my CI/CD pipeline,” “I want to manage secrets in my Kubernetes cluster,” “I want to add password management to my app.”
+Organizing the open source program around those developer journeys, rather than around project maintenance, changed how we prioritized work, wrote documentation, and communicated with the community.
+Content as Developer Advocacy
+At 1Password, I produced and directed technical content at scale, contributing to my career total of over 123 developer tutorial videos. But the lesson I took away wasn’t about volume. It was about the role content plays in a trust-driven product.
+Security products live and die on trust. Developers won’t adopt a password manager, a secrets management tool, or an authentication SDK unless they trust the company behind it. Traditional marketing erodes that trust. Technical content builds it.
+The content strategy at 1Password was built around demonstrating competence rather than making claims. Show a developer exactly how the CLI works. Walk through the architecture of the secrets management system. Explain the encryption model in detail. Every piece of content was an opportunity to prove that the people behind the product understand the developer’s world.
+This approach to content, lead with technical depth rather than marketing polish, is something I now bring to every engagement. It’s especially relevant for API-first companies where the buyer and the user are often the same technical person.
+Cross-Functional GTM
+One of the more valuable parts of the 1Password experience was leading cross-functional go-to-market efforts. Developer relations doesn’t operate in a vacuum. Launches involve product, engineering, marketing, sales, and support, and someone needs to be the connective tissue between the developer’s perspective and the rest of the organization.
+At 1Password, I served that function: translating developer needs into product priorities, coordinating launch timelines across teams, and ensuring that the developer experience was considered in every GTM decision. This is a skill that doesn’t show up in most DevRel job descriptions but determines whether a DevRel program actually influences product direction or just produces content on the side.
+Three Lessons from 1Password
+Trust is the product. For security-focused developer tools, every interaction is either building or eroding trust. Content, documentation, community engagement, and open source contributions all need to be measured against that standard.
+Open source at scale requires journey-based thinking. When you have hundreds of projects, organizing around developer tasks rather than individual repos makes the ecosystem navigable and the priorities clear.
+DevRel is cross-functional or it’s just marketing. The value of developer relations comes from influencing product decisions, not just producing content. If DevRel doesn’t have a seat at the GTM table, it’s operating at a fraction of its potential.
+1Password was the most recent chapter in a career spent building developer programs at companies that hadn’t had them before. Each one, BMW, GoPro, HERE Technologies, and 1Password, taught me something different. Together, they form the foundation of the fractional DevRel practice I run today.
+The Last SaaS You’ll Ever Subscribe To
+Your Developer Tool Is Invisible to AI. That’s a Problem.
+
+---
+
 ## Your Developer Tool Is Invisible to AI. That’s a Problem.
 
 URL: https://philjohnstonii.com/blog/your-developer-tool-is-invisible-to-ai-thats-a-problem
@@ -276,17 +350,19 @@ My work sits at the intersection of developer experience, technical product stra
 I hold a BS in Computer Science from the University of Portland, where I was an Entrepreneur Scholar. I'm also certified in Prompt Engineering through Dr. Elvis Savaria's program (Facebook Llama Project).
 Portland, OR. Remote-first since 2019.
 Career Timeline
-2024 - Developer Relations, 1Password (Agilebits)
-2021-2023 - Sr. Product Manager, Cloud Marketplace Platform, HERE Technologies
+2024-2026 - Head of Developer Relations, 1Password (Agilebits)
+2021-2023 - Dir. Product, Cloud Marketplace Platform, HERE Technologies
 2019-2021 - Sr. Program Manager, Developer Relations, HERE Technologies
+2017-2019 - Developer Relations Consultant, Jaguar Land Rover
 2014-2017 - Director, GoPro Developer Relations
 2011-2014 - Head of BMW Group Developer Relations
+2008-2011 - Co-Founder ORCA Digital Solutions
 2008 - BS Computer Science, University of Portland (Entrepreneur Scholar)
-Technical Focus
-GenAI/ML: RAG Implementation, Prompt Engineering, OpenAI APIs
-Platforms: API/SDK Product Management, Developer Experience (DX)
-Cloud: Marketplace Platforms, Self-Service Infrastructure
-Metrics: Developer Adoption, Time-to-Integration, Platform Growth
+Leadership: Team building (0→team of 10), remote management since 2019, Cross-functional GTM, enterprise and open source partnerships
+AI / ML: AI-SDLC, agentic coding process and principals, RAG content pipelines, prompt engineering, LLM Agentic coding, AI agent frameworks, AI-powered content systems,
+Developer Relations: AI-optimization, zero-to-one program building, community growth, developer advocacy, technical storytelling, API/SDK evangelism
+Product: API marketplace management, developer experience (DX), cloud platform GTM, KPI definition, roadmap strategy
+Content: Video production (123+ tutorials), technical writing, developer marketing at scale, YouTube channel strategy
 What Sets Me Apart
 Zero-to-One DevRel Builder Three times I've built developer relations programs from scratch at companies that had never had one: BMW, GoPro, and 1Password. I know how to make the case internally, hire the team, define the metrics, and ship results before anyone loses patience.
 Enterprise Partnership DNA My developer programs haven't just attracted hobbyists. I've built ecosystems that brought in NASA, Google, BMW, Jaguar Land Rover, JPL, and Hot Wheels. I understand how to design programs that serve both indie builders and Fortune 500 engineering teams.
@@ -320,4 +396,4 @@ Book a 15-minute call
 ---
 
 Source: https://philjohnstonii.com
-Last updated: 2026-03-21
+Last updated: 2026-03-22

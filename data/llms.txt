@@ -4,6 +4,12 @@
 
 ## Pages
 
+- [The Last SaaS You’ll Ever Subscribe To](https://philjohnstonii.com/blog/the-last-saas-youll-ever-subscribe-to): Most business software is a UI layer on top of well-documented rules. As 
+LLMs get better at generating those interfaces on demand, the subscription 
+model starts to look like a relic. This is what comes next.
+- [What Running DevRel at 1Password Taught Me About Open Source and Developer Trust](https://philjohnstonii.com/blog/what-running-devrel-at-1password-taught-me-about-open-source-and-developer-trust): Lessons from building DevRel at 1Password: managing 900+ open source 
+projects, scaling technical content, and why trust is the product for 
+security-focused developer tools.
 - [Your Developer Tool Is Invisible to AI. That’s a Problem.](https://philjohnstonii.com/blog/your-developer-tool-is-invisible-to-ai-thats-a-problem): AI tools are reshaping how developers discover and evaluate APIs and SDKs. 
 Learn what makes a developer tool visible to LLMs, why most companies are 
 behind, and tactical steps to fix it including llms.txt, JSON-LD, MCP 
@@ -39,4 +45,4 @@ Technologies, and 1Password.
 ## About
 
 Source: https://philjohnstonii.com
-Last updated: 2026-03-21
+Last updated: 2026-03-22
