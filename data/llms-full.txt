@@ -4,6 +4,46 @@
 
 ---
 
+## Standards Are the New Moats
+
+URL: https://philjohnstonii.com/blog/standards-are-the-new-moats
+Summary: If on-demand software is the future, interoperability is its foundation. 
+JSON Schema, OpenAPI, MCP, and llms.txt are becoming the standards that 
+determine whether AI-generated tools can actually talk to each other.
+
+Standards Are the New Moats
+In my last post I argued that most business software is about to become on-demand. Users describe what they need, an LLM generates it, and the tool exists as long as they need it. If that future sounds exciting but fragile, you are paying attention.
+Because here is the problem nobody is talking about yet: if everyone is generating their own software, how does any of it talk to each other?
+The Interoperability Problem
+Picture this scenario. A property manager says: “Build me a tool that tracks tenant maintenance requests and feeds summaries into my accounting tool.” Both tools get generated on the fly. The maintenance tracker spins up. The accounting integration spins up. And then nothing happens, because the two tools have no agreement on what a maintenance request looks like, what fields it contains, or how to pass data between them.
+In the current SaaS world, this problem is solved by vendor-specific APIs and marketplace integrations. Salesforce talks to HubSpot through Zapier. Slack talks to Jira through a plugin. Each integration is a custom-built bridge between two proprietary systems.
+That model does not scale in a world of on-demand software. You cannot build a custom integration for every tool that gets generated on the fly. You need something more fundamental. You need shared standards for how data is shaped, how tools describe their capabilities, and how systems negotiate with each other.
+The Standards That Matter
+This is where document standards become critical infrastructure. Not the exciting kind of infrastructure that gets keynote talks at conferences. The boring, essential kind that makes everything else work.
+JSON Schema defines data shapes. If every generated tool agrees that a “maintenance request” has a tenant ID, a description, a priority level, and a timestamp, then any two tools can pass that object back and forth without negotiation. The schema is the contract.
+OpenAPI describes what an API can do. If your on-demand tool exposes its capabilities through an OpenAPI specification, any other tool (or any LLM) can discover those capabilities and interact with them programmatically. No documentation hunting. No reverse engineering. The spec is the documentation.
+MCP (Model Context Protocol) is doing for AI tool interoperability what USB did for hardware peripherals. An MCP server lets an AI assistant interact with your tool directly, pulling in data, executing actions, and chaining operations across multiple services. It is an early version of the universal interface contract that on-demand software needs.
+llms.txt is the simplest standard of the bunch, and that is exactly why it matters. A plain text file at your domain root that tells AI models what your product does, who it is for, and how to use it. Think of it as robots.txt for the AI era.
+Historical Parallels
+Every computing era has been defined by the standards that won adoption. USB replaced a dozen proprietary connectors. HTTP made the web possible. RSS made content syndication work (until social platforms killed it, but the standard itself was brilliant). TCP/IP connected networks that had no business talking to each other.
+The pattern is always the same. The standards that win are the ones simple enough for broad adoption. Not the most technically elegant. Not the most feature-complete. The simplest ones that solve the 80% case and get out of the way.
+JSON Schema is winning that race for data shapes. OpenAPI is winning it for API descriptions. MCP is early but has momentum because Anthropic, the company behind Claude, is pushing it aggressively and the developer community is responding. The on-demand software era will be built on these standards, or on whatever replaces them if they fail the simplicity test.
+I Am Already Using This Pattern
+My agent pipeline project uses interface contracts between agents. The Orchestrator hands off a task description to the PM agent. The PM agent produces a structured brief that the Architect agent consumes. The Architect produces a technical specification that the Engineering agent builds from.
+Each handoff works because the agents agree on the data shape. The PM does not send the Architect a blob of unstructured text and hope for the best. There is a defined schema for what a project brief contains, what a technical spec contains, and what a task assignment looks like.
+That is the same pattern at a different scale. When I generate a maintenance tracker and an accounting integration, they need the same kind of contract between them. Not a verbal agreement. Not a shared database. A formal schema that both tools respect.
+The Regulatory Angle
+Here is something that makes this transition faster than people expect: regulated industries already mandate document standards. Healthcare has HL7 and FHIR for patient data. Finance has FIX for trading messages and XBRL for financial reporting. Real estate, my current domain, has MISMO for mortgage data.
+These standards exist because regulators understood decades ago that interoperability requires formal contracts. The on-demand software era is not inventing this concept. It is extending it to every other domain that does not yet have mandated standards.
+The companies generating on-demand tools for healthcare will have to output FHIR-compliant data. The companies generating financial tools will have to respect XBRL schemas. Compliance is not an obstacle to on-demand software. It is a forcing function that accelerates the adoption of standards.
+Why This Matters Now
+If my argument from the last post holds, that most business software is a regenerable UI layer over commodity logic, then the moat shifts. It is no longer about the application. It is about the data format and the interface contract.
+The companies that own the standards will have the same structural advantage that USB-IF has over every peripheral manufacturer. They will not make the tools. They will define the contracts that make the tools interoperable. And in a world where the tools themselves are generated on the fly, that contract layer becomes the most valuable piece of the stack.
+The next post in this series covers the other half of the reliability question: what happens when on-demand software needs to be trustworthy enough to use twice. That is where software development lifecycle practices come in, and why vibe coding is great for prototypes but terrible for anything you need to depend on.
+The Last SaaS You’ll Ever Subscribe To
+
+---
+
 ## The Last SaaS You’ll Ever Subscribe To
 
 URL: https://philjohnstonii.com/blog/the-last-saas-youll-ever-subscribe-to
@@ -40,6 +80,7 @@ If you are a founder building a SaaS product, the question to ask yourself is: w
 If you are a developer building tools for yourself or your team, you are already living in this future. Every script you generate, every dashboard you spin up, every workflow you automate with a prompt is on-demand software in its earliest form.
 And if you are a user who has ever been frustrated by software that almost does what you need, the future looks like this: you describe what you want, and the tool exists. Not a tool that was designed for a million users and sort of works for your case. A tool that was designed for you.
 That is the trajectory I see. Not the death of all SaaS overnight, but a steady erosion of the moats that justified subscription pricing in the first place. The companies that survive will be the ones that own the data layer, the integration standards, or the trust infrastructure. Everyone else is selling a UI that the user can rebuild themselves.
+Standards Are the New Moats
 What Running DevRel at 1Password Taught Me About Open Source and Developer Trust
 
 ---
@@ -396,4 +437,4 @@ Book a 15-minute call
 ---
 
 Source: https://philjohnstonii.com
-Last updated: 2026-03-23
+Last updated: 2026-03-24

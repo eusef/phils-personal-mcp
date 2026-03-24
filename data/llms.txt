@@ -4,6 +4,9 @@
 
 ## Pages
 
+- [Standards Are the New Moats](https://philjohnstonii.com/blog/standards-are-the-new-moats): If on-demand software is the future, interoperability is its foundation. 
+JSON Schema, OpenAPI, MCP, and llms.txt are becoming the standards that 
+determine whether AI-generated tools can actually talk to each other.
 - [The Last SaaS You’ll Ever Subscribe To](https://philjohnstonii.com/blog/the-last-saas-youll-ever-subscribe-to): Most business software is a UI layer on top of well-documented rules. As 
 LLMs get better at generating those interfaces on demand, the subscription 
 model starts to look like a relic. This is what comes next.
@@ -45,4 +48,4 @@ Technologies, and 1Password.
 ## About
 
 Source: https://philjohnstonii.com
-Last updated: 2026-03-23
+Last updated: 2026-03-24
