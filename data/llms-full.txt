@@ -198,6 +198,45 @@ The Last SaaS You’ll Ever Subscribe To
 
 ---
 
+## The Last SaaS You’ll Ever Subscribe To
+
+URL: https://philjohnstonii.com/blog/the-last-saas-youll-ever-subscribe-to
+Summary: Most business software is a UI layer on top of well-documented rules. As LLMs get better at generating those interfaces on demand, the subscription model starts to look like a relic. This is what comes next.
+
+The Last SaaS You’ll Ever Subscribe To
+In September, I wrote about the future of micro-niche AI tools. The core idea was simple: instead of hunting for software that sort of fits your needs, you describe what you want and an LLM builds it for you in minutes. That post focused on personal tools. Scripts, dashboards, one-off utilities tuned to how you actually work.
+This post is about what happens when that same idea scales to business software.
+The UI Is the Product. The Logic Is Commodity.
+Think about the software most businesses run on. CRMs, project management tools, invoicing systems, expense trackers, onboarding checklists. Strip away the branding and the pricing page, and what you have is a user interface layer sitting on top of well-documented business processes.
+The intellectual property in most SaaS products is not the logic. Invoicing follows rules. Project tracking follows rules. CRM workflows follow rules. The value has always been in persistence (your data stays somewhere), integrations (it connects to your other tools), and muscle memory (your team already knows how to use it).
+LLMs can already generate full working applications from a description. I have watched models produce functional CRUD apps, dashboards, and form-based workflows in a single session. The gap is not capability. The gap is statefulness. A user needs an instance they can return to tomorrow, customize over time, and trust with real data.
+Striking an Instance
+The concept I keep coming back to is “striking an instance.” If you work in infrastructure, you know the idea. You spin up a container, configure it, point traffic at it, and it runs. When you are done, you tear it down.
+Now imagine that for a non-technical user. You describe what you need: “I want a tool that tracks tenant maintenance requests, lets me assign them to contractors, and sends me a weekly summary.” An LLM generates the application. It spins up with your data, your preferences, your integrations. You use it until you do not need it anymore, or you keep it running and iterate on it over time.
+This is not theoretical. I am already building this way. My property management system started as Markdown files in a git repository, and I am layering a FastAPI and HTMX interface on top of it. The logic is simple. The data format is portable. The interface can be regenerated or redesigned at any point because the underlying structure is clean and well-documented.
+That is on-demand software. Not an app you download. Not a subscription you pay monthly for. A tool that exists because you described it.
+Proof It Already Works
+Earlier this year I replaced an entire SaaS workflow with a vibe-coded TUI built in an afternoon. I was using Khoros for community management and needed a specific view of the data that their product did not offer. Instead of filing a feature request or shopping for a different vendor, I asked an LLM to build me a terminal-based reader that pulled exactly the data I needed and displayed it exactly the way I wanted.
+It took one afternoon. Not one sprint. Not one procurement cycle. One afternoon.
+Now scale that idea. Expense reports. Lease tracking. Onboarding checklists for new employees. Inventory management for a small warehouse. Every one of these is a well-documented process that an LLM can turn into a working tool if you give it the right description and a clean data layer underneath.
+The SaaS Pricing Model Breaks Down
+Here is the part that should make SaaS executives uncomfortable. The traditional model charges you monthly for access to software that does not change much between updates. You pay for the privilege of using someone else’s UI on top of logic that is fundamentally commodity.
+When a user can regenerate the tool, the pricing model collapses. Why pay $49 per seat per month for a project management tool when you can describe what you need and have a working version in 20 minutes? The answer today is still persistence, integrations, and trust. But those barriers are eroding fast.
+Persistence is a solved problem. Databases are cheap and plentiful. Integrations are moving toward standard protocols (more on this in my next post). Trust is the last real moat, and it is a function of reliability and security, both of which can be engineered into a generation pipeline.
+The Counterarguments Are Real but Solvable
+I am not going to pretend this transition is frictionless. Vendor lock-in is a genuine concern. Enterprises have decades of data gravity pulling them toward existing platforms. Compliance requirements in healthcare, finance, and real estate mean you cannot just spin up software and hope for the best.
+But these are engineering problems, not fundamental barriers. Data portability standards exist. Compliance frameworks can be codified into generation templates. The same LLMs that build the software can also validate it against regulatory requirements before it ever touches production data.
+The real question is not whether on-demand software will replace SaaS. It is how quickly the tooling around it matures to handle the edge cases that enterprises care about. Standards, interoperability, and software development lifecycle practices will determine the pace. Those are topics I will cover in the next two posts in this series.
+What This Means for You
+If you are a founder building a SaaS product, the question to ask yourself is: what part of my product cannot be regenerated by an LLM? If the answer is mostly the data layer and the integrations, your moat is thinner than you think.
+If you are a developer building tools for yourself or your team, you are already living in this future. Every script you generate, every dashboard you spin up, every workflow you automate with a prompt is on-demand software in its earliest form.
+And if you are a user who has ever been frustrated by software that almost does what you need, the future looks like this: you describe what you want, and the tool exists. Not a tool that was designed for a million users and sort of works for your case. A tool that was designed for you.
+That is the trajectory I see. Not the death of all SaaS overnight, but a steady erosion of the moats that justified subscription pricing in the first place. The companies that survive will be the ones that own the data layer, the integration standards, or the trust infrastructure. Everyone else is selling a UI that the user can rebuild themselves.
+Standards Are the New Moats
+What Running DevRel at 1Password Taught Me About Open Source and Developer Trust
+
+---
+
 ## What Running DevRel at 1Password Taught Me About Open Source and Developer Trust
 
 URL: https://philjohnstonii.com/blog/what-running-devrel-at-1password-taught-me-about-open-source-and-developer-trust
@@ -528,4 +567,4 @@ Book a 15-minute call
 ---
 
 Source: https://philjohnstonii.com
-Last updated: 2026-04-09
+Last updated: 2026-04-10

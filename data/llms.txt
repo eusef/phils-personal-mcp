@@ -10,6 +10,7 @@
 - [Vibe Coding Got You the Prototype. Now What?](https://philjohnstonii.com/blog/pua6p9xgs4r03fjb8570vkp17cabzm): Vibe coding is great for prototypes, but production software still needs guardrails. Here’s why AI-generated code demands the same SDLC discipline we’ve always applied, and how an 8-stage agent pipeline keeps things from falling apart.
 - [Building GoPro’s Developer Program from Zero to 330 Partners](https://philjohnstonii.com/blog/building-gopros-developer-program-from-zero-to-330-partners): How Phil Johnston built GoPro's developer program from zero to 330+ partners including NASA, Google, and BMW. Lessons on building developer ecosystems at hardware companies.
 - [Standards Are the New Moats](https://philjohnstonii.com/blog/standards-are-the-new-moats): If on-demand software is the future, interoperability is its foundation. JSON Schema, OpenAPI, MCP, and llms.txt are becoming the standards that determine whether AI-generated tools can actually talk to each other.
+- [The Last SaaS You’ll Ever Subscribe To](https://philjohnstonii.com/blog/the-last-saas-youll-ever-subscribe-to): Most business software is a UI layer on top of well-documented rules. As LLMs get better at generating those interfaces on demand, the subscription model starts to look like a relic. This is what comes next.
 - [What Running DevRel at 1Password Taught Me About Open Source and Developer Trust](https://philjohnstonii.com/blog/what-running-devrel-at-1password-taught-me-about-open-source-and-developer-trust): Lessons from building DevRel at 1Password: managing 900+ open source projects, scaling technical content, and why trust is the product for security-focused developer tools.
 - [Your Developer Tool Is Invisible to AI. That’s a Problem.](https://philjohnstonii.com/blog/your-developer-tool-is-invisible-to-ai-thats-a-problem): AI tools are reshaping how developers discover and evaluate APIs and SDKs. Learn what makes a developer tool visible to LLMs, why most companies are behind, and tactical steps to fix it including llms.txt, JSON-LD, MCP servers, and content strategy.
 - [15,000 Developers During a Pandemic: What I Learned at HERE Technologies](https://philjohnstonii.com/blog/iuqdpdkpo11dzgygsoz7j7cbiwq9zx): How Phil Johnston onboarded 15,000 developers at HERE Technologies during the pandemic using digital-first DevRel, then expanded the cloud marketplace by 2,250x as product manager.
@@ -24,4 +25,4 @@
 ## About
 
 Source: https://philjohnstonii.com
-Last updated: 2026-04-09
+Last updated: 2026-04-10
