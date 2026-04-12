@@ -7,8 +7,38 @@
 ## My Agentic Coding Stack: How I Ship Software With AI Agents
 
 URL: https://philjohnstonii.com/blog/my-agentic-coding-stack-how-i-ship-software-with-ai-agents
+Summary: Most developers using AI for coding dump everything into one chat window and hope for the best. I think I may have found a better way. A workflow that treats different AI tools…
 
 My Agentic Coding Stack: How I Ship Software With AI Agents
+Most developers using AI for coding dump everything into one chat window and hope for the best. I think I may have found a better way. A workflow that treats different AI tools as specialists, each doing what they're best at. The result: well-architected applications with full test suites, built faster than I ever could alone.
+Here's the full stack.
+It Starts With a Walk
+Every feature starts the same way. I grab my dog, put in my earbuds, and open Claude Chat's voice mode. No screen, no keyboard. Just a conversation.
+This is where the real thinking happens. I brainstorm the concept with Claude, talking through what I'm trying to build and why. Depending on the feature, the conversation might go in a few directions. Product research: how do users typically expect this to work? What are the patterns? Technical research: which API should I use? How do others implement this? Tactical decisions: what's the right approach for notifications, state management, or whatever the specific challenge is?
+When I need real data, I turn on Claude's research function and do a deep dive mid-walk. It comes back with a brief on the topic, and that research either confirms my direction or shifts it entirely.
+By the time I'm back home, I have a solid concept and a clear direction.
+The Agent Brief
+The first concrete artifact is the agent brief. Think of it as a summary of everything from the walk conversation. I export the relevant files from the chat, and this brief becomes the single source of truth for what we're building.
+If there were tactical deep-dives during the walk (which API to use, how a specific system works), those become separate reference documents linked from the brief. The brief stays focused on the what and why . The tactical docs cover the how .
+From Brief to PRD
+Next, I move into Claude Code or Cowork (Anthropic's desktop tool for working with AI agents on files and tasks) and feed in the files from the walk. Before the agent writes anything, I put it in Plan mode. Plan mode tells the agent to think through its approach and show me a plan before taking action. This is a critical step. I want to see how the agent is going to structure the PRD (a product requirements document that defines exactly what we're building, for whom, and how we'll know it works) before it starts writing.
+Once I approve the plan, the agent produces the PRD. At this stage, I'm adding a review layer. The agent gets it about ninety percent right. My updates, maybe five to ten percent of the total work, are a mix of gut checks and catching things that don't quite land. Sometimes it's strategic refinements. Sometimes it's correcting assumptions. But by this point, the PRD is largely ready.
+Tickets That Agents Can Grab
+Once the PRD is solid, I ask the same agent to create a GitHub issue for the PRD itself, then break it down into individual issues. Each issue is scoped so an independent agent can pick it up and implement it without needing the full project context.
+For anyone unfamiliar: GitHub issues are basically task cards that developers use to track work. By creating one issue per feature chunk, each AI agent gets a focused, self-contained assignment.
+I review everything here too, updating anything that needs adjustment. But because I've been reviewing outputs all along the way, there's rarely much to change.
+Implementation: One Agent, One Ticket
+This is where Cursor (an AI-native code editor) comes in. Claude is exceptional for analytical work: research, discussion, strategy. But for raw implementation speed, Cursor has optimized that workflow to be remarkably fast.
+My approach is simple. I spin up one agent per ticket in Cursor and give it only what it needs for that specific issue. No full PRD dump, no project history. Just the focused context for that one piece of work. And just like the PRD stage, I always start in Plan mode. The agent reads the ticket, outlines its approach, and I approve or adjust before any code gets written. This keeps the agent from going down the wrong path and saves a lot of wasted cycles.
+When the agent completes the implementation, I have it draft a handover document. This captures what was done and provides context for the next agent picking up the next ticket. Keeping context small lets each agent do its best work.
+Along the way, I'm committing code and closing tickets as each one completes. If bugs come up, I make a quick gut check: can the agent fix this in a simple prompt? If yes, we handle it immediately. If it's more complex, I create a new ticket to be addressed later. No rabbit holes.
+The Architecture Pass
+Once all the issues are implemented, I move back into Claude Code for the final refinement pass. This is where I look at the codebase holistically: identifying code that can be reused and simplified, removing redundant implementations, ensuring test coverage is complete, and improving overall structure.
+Sometimes this means surgical fixes. Sometimes it means rewriting chunks. The code that Cursor produces is fast and functional, but it's not always the cleanest. This pass is where the architecture gets tightened up.
+The key insight is that different tools excel at different things.
+Claude Chat is for thinking: research, brainstorming, strategic decisions. Claude Code and Cowork are for planning: PRDs, issue creation, architectural review. Cursor is for doing: fast, focused implementation.
+Trying to make one tool do everything is like using a hammer for screws. By matching each phase of development to the tool that's best at it, keeping agent context small and focused, and always making agents plan before they act, I end up with well-architected applications and full test suites, built in a fraction of the time.
+The walk with the dog doesn't hurt either.
 Code Is Commodity. Art Direction Is the Moat.
 
 ---
@@ -567,4 +597,4 @@ Book a 15-minute call
 ---
 
 Source: https://philjohnstonii.com
-Last updated: 2026-04-11
+Last updated: 2026-04-12
