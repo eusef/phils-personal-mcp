@@ -4,6 +4,36 @@
 
 ---
 
+## Fresh Eyes: How I Got Past My Agent's Quality Ceiling
+
+URL: https://philjohnstonii.com/blog/fresh-eyes-how-i-got-past-my-agents-quality-ceiling
+Summary: Most people iterating with AI agents hit the same wall eventually. The output quality plateaus. You tweak prompts, refine skills, adjust context. The results are fine. But they stop getting better. I hit that wall recently, and I think I found a technique worth sharing.
+
+Fresh Eyes: How I Got Past My Agent's Quality Ceiling
+Most people iterating with AI agents hit the same wall eventually. The output quality plateaus. You tweak prompts, refine skills, adjust context. The results are fine. But they stop getting better. I hit that wall recently, and I think I found a technique worth sharing.
+I've been building a mobile app called WWV Decoder that helps amateur radio operators understand propagation conditions. One of the features is an educational widget that explains when and why certain radio frequencies work for regional communication. I had a full agent stack running the build: the same kind of multi-agent workflow I described in my last post about the agentic coding stack. Product manager, architect, designer, implementer. Each agent scoped to its role, each operating with focused context.
+The pipeline was solid. The agents were well-configured. And the output had plateaued.
+Anchored to My Own Thinking
+Here's what I realized: my agents were anchored to my understanding of the problem. Every skill, every prompt, every piece of context I'd fed them carried my assumptions about how things should work. The agents were reflecting my thinking back at me, just dressed up in different formats.
+That's fine when your understanding is complete. But when it's not, you get a feedback loop. The agents can't see what you can't see, because you've already framed the problem for them.
+In my case, the widget was teaching users about foF2 propagation (foF2 is the critical frequency of the ionosphere's F2 layer, essentially the ceiling above which a radio signal passes through into space instead of bouncing back to earth). The concept matters because of a technique called NVIS, near-vertical incidence skywave, where you aim a signal straight up and the ionosphere reflects it back down to cover a 0-300 mile radius. My agents were producing decent educational content around it. But something was off, and I couldn't figure out what.
+The widget was only showing half the picture. I just didn't know it yet.
+Instead of continuing to iterate within my existing stack, I did something different. I opened Claude's deep research feature and started a completely new session. No skills loaded. No project history. No context about my agent architecture or design decisions. Just a clean slate.
+I gave the fresh agent three things: my PRD (the product requirements document for the widget), a description of the problem I was trying to solve for the end user, and internet access so it could research independently. Then I asked it to critique my approach and suggest a better way to present the concept visually.
+The fresh agent did its own research on NVIS propagation and came back with something I hadn't considered at all: my widget was only accounting for the foF2 value, the ionospheric ceiling. It was completely ignoring the D-layer absorption floor.
+Here's why that matters. During daytime, the sun energizes a lower atmospheric layer called the D-layer, which acts as a sponge for lower frequencies. D-layer absorption at 3.5 MHz (the 80-meter amateur band) is roughly 25 dB at midday. That is enough to kill an NVIS signal before it ever reaches the reflecting layer above. My widget was recommending 80 meters during daytime based solely on the foF2 ceiling being high enough. The signal would technically reflect, but it would get absorbed on the way up. The recommendation was wrong.
+The correct model requires two constraints, not one. Your operating frequency must be below the foF2 ceiling and above the D-layer absorption floor. The fresh agent proposed what it called a "sandwich representation," where both boundaries are shown together so the user can see when a band fits in the operating window between them. That was the educational insight the widget needed to deliver.
+I never would have gotten there by iterating within my existing stack, because my existing stack was anchored to my incomplete understanding of the problem.
+The key insight is that the fresh agent had no loyalty to my original approach. It didn't know I'd spent weeks building around foF2 alone. It didn't know about my design decisions or my architecture. All it had was the PRD, the problem statement, and the ability to research.
+That lack of anchoring is what made it valuable. When an agent starts from scratch, it doesn't inherit your blind spots. It can look at the problem from first principles, do its own research, and arrive at conclusions that your existing agents can't reach because they're operating inside your frame.
+The pattern is simple. When output from my agent workflows plateaus, I open a fresh session with no project context, no skills, no history. I give the agent the requirements document and a description of the specific problem I'm trying to solve for the user. I make sure it has internet access for independent research. Then I ask it to critique my approach and propose alternatives.
+The goal isn't to replace my existing stack. It's to get a second opinion from something that isn't trapped in my thinking. Once the fresh agent identifies gaps or new approaches, I bring those insights back into my main workflow. The existing agents do the implementation. The fresh agent just tells me what I'm missing.
+I'm running the same technique on a second widget now, this one for solar flux data. If the pattern holds across both cases, it's not a one-off. It's a repeatable step in the process.
+The broader point is this: the agents I've trained on my project know a lot about my project. But they also know too much about my version of it. Sometimes the most productive thing I can do is talk to someone who's never heard of it.
+My Agentic Coding Stack: How I Ship Software With AI Agents
+
+---
+
 ## My Agentic Coding Stack: How I Ship Software With AI Agents
 
 URL: https://philjohnstonii.com/blog/my-agentic-coding-stack-how-i-ship-software-with-ai-agents
@@ -39,6 +69,7 @@ The key insight is that different tools excel at different things.
 Claude Chat is for thinking: research, brainstorming, strategic decisions. Claude Code and Cowork are for planning: PRDs, issue creation, architectural review. Cursor is for doing: fast, focused implementation.
 Trying to make one tool do everything is like using a hammer for screws. By matching each phase of development to the tool that's best at it, keeping agent context small and focused, and always making agents plan before they act, I end up with well-architected applications and full test suites, built in a fraction of the time.
 The walk with the dog doesn't hurt either.
+Fresh Eyes: How I Got Past My Agent's Quality Ceiling
 Code Is Commodity. Art Direction Is the Moat.
 
 ---
@@ -597,4 +628,4 @@ Book a 15-minute call
 ---
 
 Source: https://philjohnstonii.com
-Last updated: 2026-04-12
+Last updated: 2026-04-13

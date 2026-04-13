@@ -4,6 +4,7 @@
 
 ## Pages
 
+- [Fresh Eyes: How I Got Past My Agent's Quality Ceiling](https://philjohnstonii.com/blog/fresh-eyes-how-i-got-past-my-agents-quality-ceiling): Most people iterating with AI agents hit the same wall eventually. The output quality plateaus. You tweak prompts, refine skills, adjust context. The results are fine. But they stop getting better. I hit that wall recently, and I think I found a technique worth sharing.
 - [My Agentic Coding Stack: How I Ship Software With AI Agents](https://philjohnstonii.com/blog/my-agentic-coding-stack-how-i-ship-software-with-ai-agents): Most developers using AI for coding dump everything into one chat window and hope for the best. I think I may have found a better way. A workflow that treats different AI tools…
 - [Code Is Commodity. Art Direction Is the Moat.](https://philjohnstonii.com/blog/hb3sdhgq74qbq63nhp90s6h4gf5cpa): AI can generate code, but it can’t replace the human eye for design. Game artists, trained in composition, color theory, and spatial storytelling, are uniquely positioned to shape the next generation of software interfaces.
 - [The 80/20 Rule for AI Code Review](https://philjohnstonii.com/blog/wc9s23btpmv673x8k9ihp15w2b668e): LLM-powered agents can simulate QA, security, and architecture expertise well enough to catch 80% of the issues a human reviewer would. The question is whether that last 20% still justifies the cost of a dedicated specialist.
@@ -25,4 +26,4 @@
 ## About
 
 Source: https://philjohnstonii.com
-Last updated: 2026-04-12
+Last updated: 2026-04-13
