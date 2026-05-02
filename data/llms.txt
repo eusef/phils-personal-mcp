@@ -4,6 +4,7 @@
 
 ## Pages
 
+- [I Built a Throwaway Tool to Cram Python in Two Days. The Lesson Wasn't About Python.](https://philjohnstonii.com/blog/i-built-a-throwaway-tool-to-cram-python-in-two-days-the-lesson-wasnt-about-python): I've programmed in Python before. I've also programmed in plenty of other languages since, and the syntax had drifted. The logic was still there. The idiomatic shortcuts that make Python feel like Python were not. I needed to close that gap fast, and I have memory challenges that make traditional cram sessions a slog. Generic Python courses were the wrong shape. They assumed I was new. They wanted weeks. I had 48 hours.
 - [/insights report](https://philjohnstonii.com/blog/insights-report): I asked Claude Code to run a usage report on my Claude Code sessions from the last two weeks.    Around 200 sessions, 235 hours   , across game dev, mobile apps, multi-agent tooling, and infrastructure. I'm publishing the redacted version because it's a useful snapshot of how one person is actually working with AI coding agents in 2026, and because if you sell dev tools, your buyer might look more like this than you think.
 - [Stop Letting Your AI Agents Be Generalists](https://philjohnstonii.com/blog/stop-letting-your-ai-agents-be-generalists): I've been building two apps with AI agents doing most of the heavy lifting. One is a ham radio propagation tool for iOS. The other is a game for my daughter. Both started the same way: I gave the agent a prompt, it built something, and the result was fine. Just fine. Functional, forgettable, and looking like every other AI-generated app out there. Then I changed one thing, and the entire quality of the output shifted…
 - [Fresh Eyes: How I Got Past My Agent's Quality Ceiling](https://philjohnstonii.com/blog/fresh-eyes-how-i-got-past-my-agents-quality-ceiling): Most people iterating with AI agents hit the same wall eventually. The output quality plateaus. You tweak prompts, refine skills, adjust context. The results are fine. But they stop getting better. I hit that wall recently, and I think I found a technique worth sharing.
@@ -32,4 +33,4 @@
 ## About
 
 Source: https://philjohnstonii.com
-Last updated: 2026-05-01
+Last updated: 2026-05-02

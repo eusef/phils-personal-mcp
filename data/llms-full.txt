@@ -4,6 +4,51 @@
 
 ---
 
+## I Built a Throwaway Tool to Cram Python in Two Days. The Lesson Wasn't About Python.
+
+URL: https://philjohnstonii.com/blog/i-built-a-throwaway-tool-to-cram-python-in-two-days-the-lesson-wasnt-about-python
+Summary: I've programmed in Python before. I've also programmed in plenty of other languages since, and the syntax had drifted. The logic was still there. The idiomatic shortcuts that make Python feel like Python were not. I needed to close that gap fast, and I have memory challenges that make traditional cram sessions a slog. Generic Python courses were the wrong shape. They assumed I was new. They wanted weeks. I had 48 hours.
+
+I Built a Throwaway Tool to Cram Python in Two Days. The Lesson Wasn't About Python.
+I had two days to get Python syntax back into my head before a technical screen for a job I wanted.
+I've programmed in Python before. I've also programmed in plenty of other languages since, and the syntax had drifted. The logic was still there. The idiomatic shortcuts that make Python feel like Python were not. I needed to close that gap fast, and I have memory challenges that make traditional cram sessions a slog. Generic Python courses were the wrong shape. They assumed I was new. They wanted weeks. I had 48 hours.
+So I did the thing I do for a living. I built a tool.
+The wrong question is "what course should I take"
+Most people in my spot would search for a Python crash course. Maybe buy one. Maybe pick a YouTube playlist. The shape of those products is fixed. They were built before the user showed up, for an average learner who doesn't exist.
+The right question, given what AI agents can now do, is different. What tool would I build for myself if I had infinite time, and how do I get an agent to build it for me in an hour?
+That reframe matters. It changes learning from "find the right course" to "spec the right tool." And the spec is the easy part once you know your own constraints.
+I didn't trust myself to write the spec. I've been away from Python long enough that I don't know what I don't know. So I had two AI agents do it for me, independently.
+I asked ChatGPT and Claude the same question: given my background and the test format, what specifically do I need to drill? They each came back with a list. Some overlap, some divergence. Both useful.
+Then I handed both lists to my product manager agent, and asked them to merge the feedback into a single spec. No conflicts to resolve. The two takes lined up cleanly. I had a working spec in about ten minutes.
+I also asked the agent to fold in known research on accelerated learning. I had two days. I have memory challenges. I needed an optimized approach, not a generic one. He built that constraint into the spec.
+From there, my developer agent built the tool from that spec. I was running it on my laptop that afternoon.
+What the tool actually was
+The output was a practice rig, not a course. Specifically:
+LayerWhat it didScenariosThree end-to-end practice scenarios covering the syntax I neededLevelsFour progressive levels per scenario, easy to hardTasksFive to ten small coding tasks per levelStubsFunction signatures and instructions; I wrote the bodyDashboardTracked my time per level, told me when I'd passed, gated me to the next one
+That was it. No videos. No quizzes. No content I had to read. Just small tasks to fill in, automatic checks that ran green or red, and a clock telling me how long each level took.
+The whole thing was disposable. Built for me, for two days, for one specific test. When I was done, I didn't need it anymore.
+The tool worked. By the end of day two I was writing Python the way Python is meant to be written. The muscle came back.
+The test result was a fair audit of what the tool did and didn't do. I cleared about half of it. Knowing the syntax is not the same as solving novel problems under time pressure, and a two-day cram doesn't fix that gap. Another week on the practice rig would have closed it.
+That's the real lesson, not a marketing pitch. The tool did exactly what I built it to do. The thing it didn't do, I didn't build it to do.
+The pattern, not the Python
+Python is the demo. The pattern is the point.
+Anyone with a learning goal and access to a coding agent can now spec a custom learning tool, get it built in an hour or so, drill on it for the time they have, and throw it away. The blueprint is roughly:
+Two agents infer your gap. Ask different models the same question. Compare. The disagreement is information.
+A PM agent writes the spec. Merge the two takes. Add your constraints: time, learning style, prior knowledge.
+A dev agent builds the practice rig. With progress tracking and gating built in.
+You drill. Then you delete the tool.
+This works for any subject the model already knows about. Foreign languages. History. Chemistry. Music theory. Anything where the knowledge exists and the bottleneck is structured practice.
+The flashcard was the last generation's version of this. Anki was the version after that. The version we have now is custom-built, on demand, tuned to one learner, one goal, one window of time.
+What this means if you sell developer tools
+Here's why this matters for anyone selling APIs, SDKs, or developer platforms.
+The buyer in front of your product is changing. The same person who would have bought a Python course last year just built one in an hour. The same developer who would have evaluated three SDKs and picked one is now asking an agent to build the small piece of code that does the specific thing they need. Your product has a fixed shape. The thing the buyer's agent can build has whatever shape the buyer needs.
+That's not a threat to every category of dev tool. But it's a threat to any category where the value was "we packaged this knowledge for you." The agent now packages knowledge on demand, for one user, for one job.
+If you sell to developers, the question worth sitting with is: what's left of your value once the buyer can build the version they actually want, in an afternoon, for free?
+I crammed Python in two days with a tool I built that morning. That's not the interesting part. The interesting part is that this is normal now, and most products were not designed for buyers who can do that.
+/insights report
+
+---
+
 ## /insights report
 
 URL: https://philjohnstonii.com/blog/insights-report
@@ -65,6 +110,7 @@ Chain existing skills (PRD decomposition, ticket-loop, test-harness, architectur
 Test-harness-driven iteration loops
 The Dart shelf harness is the foundation for a closed-loop system where agents iterate against real app states until behavior matches a spec. Agent gets a bug report, reproduces it via a harness profile, writes a failing test, iterates while watching screenshots, and only stops when visual and functional assertions pass.
 Claude played Snake by BFS until it scored a perfect 10/10, after first dying repeatedly due to MCP latency. In a playful session, I asked Claude to play Snake. Initial attempts using MCP tools had too much roundtrip latency, so the snake kept dying. Claude pivoted to direct socket communication with per-step BFS replanning, achieved a perfect game, then packaged it up as a reusable script and agent guide.
+I Built a Throwaway Tool to Cram Python in Two Days. The Lesson Wasn't About Python.
 Stop Letting Your AI Agents Be Generalists
 
 ---
@@ -907,4 +953,4 @@ Or visit: philjohnstonii.com/contact
 ---
 
 Source: https://philjohnstonii.com
-Last updated: 2026-05-01
+Last updated: 2026-05-02
